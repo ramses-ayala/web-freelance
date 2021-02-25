@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sitio Web Freelancer</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+	<header class="site-header">
+		<nav>
+			<a href="#">Inicio</a>
+			<a href="#">Nosotros</a>
+			<a href="#">Clientes</a>
+			<a href="#">Contacto</a>
+		</nav>
+	</header>
+
+	<div class="hero">
+		<div class="contenedor-hero">
+			<h2>Diseño y Desarrollo Freelancer</h2>
+			<i class="fas fa-map-marker-alt"></i> <p>Torreon, Coahuila</p>
+			<a href="#" class="boton">Contactar</a>
+		</div>
+	</div>
+	
+	<div class="contenedor servicios">	<!--se agrego este div con la clase .contenedor para que
+								abarque el main y el section del formulario-->
+	
+		<main class="servicios">
+
+			<h2>Nuestros Servicios</h2>
+			<div class="contenedor-servicios">
+
+				<div class="servicio">
+					<h3>Diseño Web</h3>
+					<div class="iconos">
+						<i class="fas fa-pen-fancy"></i>
+					</div>
+					<p>Aenean sed dui a est tristique congue vitae eu tortor. Fusce id posuere ante. In eget mauris ante.
+					 Suspendisse sollicitudin venenatis orci, et sodales leo placerat sed.  </p>
+				</div>
+
+				<div class="servicio">
+					<h3>Diseño Web</h3>
+					<div class="iconos">
+							<i class="fab fa-android"></i>
+							<i class="fab fa-apple"></i>
+					</div>
+					<p>Aenean sed dui a est tristique congue vitae eu tortor. Fusce id posuere ante. In eget mauris ante.
+					Suspendisse sollicitudin venenatis orci, et sodales leo placerat sed.</p>
+				</div>
+
+				<div class="servicio">
+					<h3>Diseño Web</h3>
+					<div class="iconos">
+							<i class="fab fa-twitter"></i>
+							<i class="fab fa-facebook"></i>
+					</div>
+					<p>Aenean sed dui a est tristique congue vitae eu tortor. Fusce id posuere ante. In eget mauris ante.
+					Suspendisse sollicitudin venenatis orci, et sodales leo placerat sed. </p>
+				</div>
+			</div>	<!--.contenedor-servicios-->
+			
+		</main>  <!--.servicios-->
+		
+		<section id="contacto" class="contacto">
+			<h2>Contacto</h2>
+			<form class="formulario-contacto">
+				<legend>Contactanos llenando todos los campos</legend>
+			
+				<div class="contenedor-campos">
+				
+					<div class="campo">
+						<label for="nombre">Nombre: </label>
+						<input type="text" id="Nombre" class="campo" placeholder="Tu Nombre">
+					</div>
+					
+					<div class="campo">
+						<label for="telefono">Teléfono: </label>
+						<input type="tel" id="telefono" class="campo" placeholder="Teléfono">
+					</div>
+					
+					<div class="campo w-100">
+						<label for="email">Correo Electrónico: </label>
+						<input type="mail" id="email" class="campo" placeholder="Email">
+					</div>
+					
+					<div class="campo w-100">
+						<label for="area">Mensaje: </label>
+						<textarea id="area" class="area-texto"></textarea>
+					</div>
+					
+				</div>	<!--.contenedor-campos-->
+				
+				<div class="enviar">
+					<input type="submit" value="ENVIAR" class="boton">
+				</div>
+				
+			</form>
+			
+		</section>	<!--.contacto #contacto-->
+	</div>	<!--.contenedor-->
+	
+	
+</body>
+</html>
