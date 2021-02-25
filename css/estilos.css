@@ -1,0 +1,299 @@
+:root{
+	--primario:#ffc107;
+	--secundario:#0097a7;
+	--oscuro:#212121;
+	--gris:#757575;		/*variable para el background del formulario*/
+}
+
+html {
+  box-sizing: border-box;
+  font-size:62.5%;				
+  min-height:100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*ESTILOS GLOBALES*/
+
+body{
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	font-family: 'Krub', sans-serif;
+	min-height:100%;
+	font-size:1.6rem;
+}
+
+h1,h2,h3{
+	margin: 0;
+}
+
+
+
+h2,h3{
+	
+	text-align: center;
+}
+
+h3{
+	color: var(--secundario);
+	font-size: 2.2rem;
+	font-weight: 400;
+}
+
+p{
+	font-size:1.8rem;
+	line-height:2;
+	
+}
+
+/*ESTILOS A LA NAVEGACION*/
+
+.site-header {
+	background-color:white;
+}
+
+.site-header nav{
+	
+	max-width:120rem;
+	margin:0 auto;
+	padding:2rem 0;
+	align-items:center;
+	display:flex;
+	flex-direction:column;
+	
+}
+
+@media (min-width:768px){
+	.site-header nav{
+		
+		flex-direction:row;
+		justify-content:space-between;
+		
+	}
+	
+	
+}
+
+.site-header nav a{
+
+		color:var(--oscuro);
+		font-size:2.2rem;
+		text-decoration:none;
+		margin-bottom:2rem;
+}
+
+.site-header nav a:last-of-type{
+	margin-bottom:0;
+	
+}
+
+/*ESTILOS PARA LA PARTE DE LA IMAGEN PRINCIPAL*/
+
+.hero{
+	background-image: url(../img/hero.jpg);
+	height: 45rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.hero::after{
+	content: '';
+	background-color: rgba(0,0,0,.7);
+	position: absolute;
+	top: 5rem;
+	right: 5rem;
+	bottom: 5rem;
+	left: 5rem;
+}
+.contenedor-hero{
+	color: white;
+	position: relative;		/*esta propiedad sirvio para que el contenido de esta clase se posicionara al frente*/
+	z-index: 1;				/*esta propiedad al igual que la otra sirvio para traer al frente el contenido de esta clase*/
+	text-align: center;
+
+}
+
+.contenedor-hero i{
+	font-size: 5rem;
+	margin-top: 3rem;
+	color: var(--primario);
+}
+
+/*ESTILOS PARA EL BOTON */
+
+.boton{
+	background-color: var(--secundario);
+	border:none;
+	border-radius: 1rem;
+	color: #ffffff;
+	cursor:pointer;
+	font-weight: 700;
+	padding: 1rem 5rem;
+	display: inline-block;
+	margin-top:1rem; 
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/*ESTILOS PARA EL CONTENIDO PRINCIPAL*/
+
+.contenedor{
+	background-color: #ffffff;
+	border-radius: 1rem;
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 2rem ;
+
+	-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.48);
+	-moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.48);
+	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.48);
+}
+
+
+.servicios{
+	
+	margin: 3rem auto;
+
+}
+
+
+/**/
+
+.contenedor-servicios{
+	margin-top:3rem;
+}
+
+.servicio{
+	display: flex;
+	/*flex-direction: column;*/
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+@media(min-width:768px){
+	
+	.contenedor-servicios{
+		display: flex;
+		justify-content: space-between;
+	
+	}
+	.servicio{
+		flex:0 0 calc(33.3% - 1rem);
+		/*display:flex;*/					/*lo que se busca con esta propiedad, es para poder mover los
+										elementos de esta clase, en especifico los circulos de 
+										los iconos*/
+										
+		/*flex-direction:column;*/			/*se cambio la direccion para que se pudieran alinear los circulos
+										de lo contrario con la opcion por default (row) no hubiera sido
+										posible de la mano con justify-content*/
+										
+		/*align-items:center;*/				/*se utilizo esta propiedad para poder alinear centrados
+										los circulos de los iconos*/
+	}
+}
+
+
+
+.iconos{
+	background-color:var(--primario);
+	border-radius:50%;
+	display:flex;
+	justify-content:space-evenly;
+	margin-top:3rem;
+	align-items:center;
+	height:100px;
+	width:100px
+	
+}
+
+.iconos i{
+	font-size: 3rem;
+}
+
+
+/*ESTILOS PARA EL FORMULARIO DE CONTACTO*/
+
+
+form{
+	background-color:var(--gris);
+	border-radius:1rem;
+	padding:2rem;	
+	margin-top:3rem;					/*<>*/
+}
+
+form legend {
+	color:var(--primario);
+	font-size:2rem;
+	margin:2rem 0;
+}
+
+@media (min-width:768px){
+	
+	form{					/*estilos al form para que se pudiera centrar en este caso se establecio el max-width
+							en 90rem*/
+		max-width:90rem;	
+		margin:3rem auto;		/*se puso de separacion arriba y abajo de 3rem para que no perdiera su separacion
+								ya que si se pone 0 y auto va perder la separacion que tenia *<>*/
+	}
+	
+	.contenedor-campos{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:space-between;
+	}
+
+	.campo{
+		flex: 0 0 calc(50% - 1rem);		/*con esta propiedad se establecio que los div que contiene esta
+										 clase van a medir el 50% - menos la separacion de 1rem*/ /*estos div 
+										 contienen la etiqueta y su campo de texto*/
+	}
+
+}
+
+.campo{
+	display: flex;						/*esta propiedad se agrego para poder manipular el tamaño de los labels y los
+										inputs en el selector de abajo (.campo label)	*<<>>*/					
+	margin-bottom: 2rem;
+}
+
+.campo label{
+	color:#ffffff;
+	flex: 0 0 9rem;						/*<<>>*/
+}
+
+.campo input{
+	flex: 1;
+	height: 4rem;
+}
+
+.campo textarea{
+	flex: 1;
+	height: 10rem;
+}
+
+.w-100{
+	flex: 0 0 100%;					/*esta propiedad se agrego para que el campo de de mail y el textarea puediran
+									ocupar el 100% del .contenedor-campos*/
+}
+
+/*ESTILOS AL BOTON DE ENVIAR*/
+
+.enviar{
+	display:flex;
+	justify-content:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
